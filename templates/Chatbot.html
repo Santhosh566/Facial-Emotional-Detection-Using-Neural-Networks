@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+</head>
+<body align="center">
+    <h1 align="center">Emotion Image Display</h1>
+    <form method="POST" action="/Chatbot" align="center">
+        <label for="emotion_name">Enter Emotion Name:</label>
+        <input type="text" id="emotion_name" name="emotion_name">
+        <button type="submit">Submit</button>
+    </form>
+    <div id="image-container">
+        {% if emotion_name %}
+            <h2>Predicted Emotion: {{ emotion_name }}</h2>
+            {% if image_path %}
+                <img src="{{ image_path }}" alt="Emotion Image">
+            {% endif %}
+        {% endif %}
+    </div>
+   <!-- <a href="/newpage" style="display: inline-block; margin-top: 20px; padding: 10px 20px; background-color: #ff5733; color: white; text-decoration: none; border-radius: 5px;">Back TO Home Page</a>-->
+    <!-- Add your JavaScript scripts or links here -->
+    <a href="/main" style="display: inline-block; margin-top: 20px; padding: 10px 20px; background-color: #ff5733; color: white; text-decoration: none; border-radius: 5px;">Back</a>
+    
+</body>
+</html>

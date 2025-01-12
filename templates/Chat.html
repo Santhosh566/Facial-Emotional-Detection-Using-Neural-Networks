@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    /* Style for the container link */
+    .container-link {
+      
+        text-decoration: none;
+        cursor: pointer;
+        position: relative; /* Positioning for dropdown */
+        display: inline-block; /* Ensure block display for width calculation */
+    }
+
+    /* Style for the dropdown content */
+    .dropdown-content {
+        display: none; /* Initially hidden */
+        position: absolute;
+        left: 0; /* Adjust to display below */
+        top: 100%;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+    /* Style for the dropdown links */
+    .dropdown-content a {
+        color: black;
+        display: block;
+        padding: 10px; /* Adjust padding for clickable area */
+        text-decoration: none;
+    }
+
+    /* Style for the dropdown links on hover */
+    .dropdown-content a:hover {
+        background-color: #f1f1f1;
+        
+    }
+
+    /* Show the dropdown content when hovering over the container link */
+    .container-link:hover .dropdown-content {
+        display: block;
+        
+    }
+
+    /* Style for the select symbol */
+    .select-symbol::after {
+        content: '\25BE'; /* Unicode for down arrow */
+        margin-left: 5px;
+    }
+</style>
+</head>
+<body>
+    <!-- Container link with select symbol -->
+    <div class="container-link">
+        Face Detection <span class="select-symbol"></span>
+        <!-- Dropdown content -->
+        <div class="dropdown-content">
+            <a href="https://www.example.com/link1" target="_blank">Real Time Face</a>
+            <a href="https://www.example.com/link2" target="_blank">Detector Name</a>
+            <a href="https://www.example.com/link3" target="_blank">Detection Percentage</a>
+        </div>
+    </div>
+</body>
+</html>

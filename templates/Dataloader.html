@@ -1,0 +1,114 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Loader</title>
+   
+</head>
+<body align="center">
+    <header>
+        <h1>Image Loader</h1>
+    </header>
+
+    <main>
+        <section>
+            
+            <p>Upload your image</p>
+            <form action="/Dataloader" method="POST" enctype="multipart/form-data">
+               
+                <input type="file" name="image">
+                <input type="submit" value="Upload">
+            </form>
+            
+           
+            {% if emotion_name %}
+                <p>Emotion Name: {{ emotion_name }}</p>
+            {% endif %}
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Image Loader Application. All rights reserved.</p>
+    </footer>
+    <a href="/newpage">Back TO Home Page</a>
+
+</body>
+</html>-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Loader</title>
+    <!-- Add your CSS links or stylesheets here -->
+</head>
+<body align="center">
+    <header>
+        <h1>Image Loader</h1>
+    </header>
+
+    <main>
+        <section>
+            <!-- Data loader content goes here -->
+            <p>Upload your image</p>
+            <form action="/Dataloader" method="POST" enctype="multipart/form-data">
+                <!-- Add input fields for uploading images -->
+                <input type="file" name="image">
+                <input type="submit" value="Upload">
+            </form>
+            
+            <!-- Display the emotion_name if available -->
+            {% if emotion_name %}
+                <p>Emotion Name: {{ emotion_name }}</p>
+            {% endif %}
+        </section>
+    </main>
+
+    
+  <!-- <a href="/newpage" style="display: inline-block; margin-top: 20px; padding: 10px 20px; background-color: #ff5733; color: white; text-decoration: none; border-radius: 5px;">Back TO Home Page</a>-->
+    <!-- Add your JavaScript scripts or links here -->
+    <a href="/main" style="display: inline-block; margin-top: 20px; padding: 10px 20px; background-color: #ff5733; color: white; text-decoration: none; border-radius: 5px;">Back</a>
+</body>
+</html>
+
+
+
+
+
+<!---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Loader</title>
+   
+</head>
+<body align="center">
+    <header>
+        <h1>Image Loade</h1>
+    </header>
+
+    <main>
+        <section>
+           
+            <p>Upload your image</p>
+            <form action="/Dataloader" method="POST" enctype="multipart/form-data">
+               
+                <input type="file" name="image">
+                <input type="submit" value="Upload">
+            </form>
+            
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Image Loader Application. All rights reserved.</p>
+    </footer>
+    <a href="/">Back TO Home Page</a>
+   
+</body>
+</html>-->

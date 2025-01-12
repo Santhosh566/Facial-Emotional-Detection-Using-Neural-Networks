@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: linear-gradient(to right, #667eea, #764ba2); /* Gradient background */
+            background-size: cover;
+            background-position: center;
+            padding: 50px;
+        }
+        h2 {
+            text-align: center;
+            margin-top: 50px;
+            color: white; /* Text color */
+        }
+        form {
+            width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative; /* Add position relative */
+        }
+        input[type="text"],
+        input[type="password"] {
+            width: calc(100% - 40px); /* Adjust width to accommodate icon */
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            background-image: url('/static/user.png'); /* Add username icon */
+            background-repeat: no-repeat;
+            background-position: 5px center; /* Adjust the position */
+            background-size: 20px; /* Adjust the size */
+            padding-left: 35px; /* Adjust the padding */
+            color: #000; /* Text color for input values */
+        }
+        input[type="password"] {
+            background-image: url('/static/pass.png'); /* Add password icon */
+            position: relative;
+        }
+        .show-password-toggle {
+            margin-bottom: 15px;
+            text-align: right; /* Align text to the right */
+        }
+        input[type="radio"] {
+            cursor: pointer;
+            vertical-align: middle; /* Align radio button with text */
+        }
+        label {
+            margin-left: 5px; /* Add margin between radio button and text */
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        p {
+            margin-bottom: 15px;
+            text-align: center;
+            color: white; /* Text color */
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .error-message-container {
+            width: 100%;
+            text-align: center; /* Center-align the content */
+            margin-top: 10px; /* Adjust the margin as needed */
+        }
+        .error-message {
+            display: inline-block; /* Display as inline block for center alignment */
+            padding: 5px 10px; /* Add padding to the message */
+            color: red;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Login</h2>
+    <form method="post">
+        {{ form.csrf_token }}
+        <p>{{ form.username.label }}<br>{{ form.username }}</p>
+        <p>{{ form.password.label }}<br>{{ form.password }}</p>
+        <p class="show-password-toggle">
+            <input type="radio" id="showPasswordRadio" name="showPassword" onclick="togglePasswordVisibility()">
+            <label for="showPasswordRadio">Show Password</label>
+        </p>
+         <!-- Display error message -->
+         {% with messages = get_flashed_messages(with_categories=true) %}
+         {% if messages %}
+             {% for category, message in messages %}
+                 {% if category == 'error' %}
+                 <div class="error-message-container">
+                     <div class="error-message">{{ message }}</div></div>
+                 {% endif %}
+             {% endfor %}
+         {% endif %}
+     {% endwith %}
+        <input type="submit" value="Login">
+
+       
+    </form>
+    <p id="s2" text-color="white">Don't have an account? <a href="{{ url_for('registeruser') }}">Register here</a></p>
+
+    <script>
+        function togglePasswordVisibility() {
+            var passwordField = document.querySelector('input[type="password"]');
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+                passwordField.style.backgroundImage = "url('/static/pass.png')";
+            } else {
+                passwordField.type = "password";
+            }
+        }
+    </script>
+</body>
+</html>

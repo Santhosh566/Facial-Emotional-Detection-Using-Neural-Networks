@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <style>
+        /* CSS styles for the about page */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+        p {
+            line-height: 1.6;
+        }
+        /* Styles for the back to home link */
+        .back-link {
+            position: fixed;
+            left: 20px;
+            top: 20px;
+            background-color: #ff5733; /* Orange background color */
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            z-index: 1000; /* Ensure link is above other content */
+        }
+        .back-link:hover {
+            background-color: #e64c00; /* Darker orange hover color */
+        }
+    </style>
+    <style>
+        .justified {
+            text-align: justify;
+        }
+</style>
+</head>
+<body>
+        <a href="/main" style="display: inline-block; margin-top: 20px; padding: 10px 20px; background-color: #ff5733; color: white; text-decoration: none; border-radius: 5px;">Back</a>
+    <div class="container">
+      
+        <p><h1 align="center">Facial Emotional Detection Using Neural Networks</h1></p>
+        <p class="justified">
+                Facial Emotional Detection Using Neural Networks leverages a dataset sourced from Kaggle, a popular platform for machine learning datasets. This dataset is organized into training and validation folders, each containing seven directories corresponding to different emotions: angry, happy, sad, surprise, neutral, fear, and disgust. The training data, spread across these directories, enables the CNN model to learn patterns and features associated with each emotion, contributing to an overall accuracy of 70%.
+
+The data preprocessing phase involves standardizing image sizes, enhancing quality, and extracting key facial features. These steps are crucial for the model to effectively distinguish and classify emotions from facial expressions. During training, the CNN model learns to recognize spatial hierarchies of features, optimizing its ability to accurately identify emotions in real-time facial images or video streams. Hyperparameter tuning and optimization techniques further refine the model's performance, enhancing its accuracy in emotion recognition tasks.
+        </p>
+    <div>
+        <a href="https://www.kaggle.com/datasets/deadskull7/fer2013?select=fer2013.csv">Fer2013</a>Data Set
+        <p>They are three types of columns
+                1.Emotion
+                2.Pixels
+                3.Usages
+        </p>
+        <div>
+                <h1>
+                        They are three fields
+                </h1>
+                <pre style="font-family: 'Times New Roman',serif; ">The fields such as
+                1.Training 
+                2.Public test
+                3.Other      
+                The Training is 80%
+                The Public is 10%
+                The Other is 10%
+                </pre>
+        </div>
+        <div>
+                <h2>The labels of Expressions
+                </h2>
+                <pre style="font-family: 'Times New Roman',serif; ">
+                        0:angry
+                        1:disgust
+                        2:fear
+                        3:happy
+                        4:neutral
+                        5:sad
+                        6:surprised
+                </pre>
+                <h1>Model saving</h1>
+                <p style="font-family: 'Times New Roman',serif; ">
+                     
+                They are used for facial emotional detection using neural network 
+                such as .keras or .h5 any model generating CNN Architecture 
+                </p>
+        </div>
+
+        <h1>
+                Architecture of CNN
+        </h1>
+        <div align="center">
+               
+                <img src="static/1-4.png">
+        </div>
+                <h1>
+                        Facial Expression From Human
+                </h1>
+                <div align="center">
+                <img src="static/emotio.jpeg">
+        </div>
+     </div>  </div>
+    <!-- Back to Home link -->
+    <!-- <a href="/newpage" style="display: inline-block; margin-top: 20px; padding: 10px 20px; background-color: #ff5733; color: white; text-decoration: none; border-radius: 5px;">Back TO Home Page</a>-->
+    <!-- Add your JavaScript scripts or links here -->
+  
+</body>
+</html>

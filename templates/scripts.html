@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    /* Style for the container link */
+    .container-link {
+        color: blue;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    /* Style for the inner links */
+    .inner-links {
+        display: none; /* Initially hidden */
+        margin-top: 5px; /* Add space between links */
+        padding: 5px; /* Add padding for inner links */
+        border: 1px solid black; /* Border for inner links */
+        background-color: white; /* Background color for inner links */
+        position: absolute; /* Position the inner links */
+        z-index: 1; /* Ensure inner links appear above other content */
+    }
+
+    /* Style for the inner links when visible */
+    .container-link:hover + .inner-links {
+        display: block; /* Show links when container link is hovered */
+    }
+
+    /* Style for the inner links' anchors */
+    .inner-links a {
+        color: black; /* Link color */
+        text-decoration: none; /* Remove underline */
+        display: block; /* Display links line by line */
+        padding: 3px; /* Add padding for clickable area */
+    }
+
+    /* Style for inner links' anchors when hovered */
+    .inner-links a:hover {
+        color: red; /* Change color on hover */
+    }
+</style>
+</head>
+<body>
+    <!-- Container link with the first link -->
+    <p class="container-link">First Link</p>
+    
+    <!-- Inner links inside the container -->
+    <div class="inner-links">
+        <p><a href="https://www.example.com/link2" target="_blank">Link 2</a></p>
+        <p><a href="https://www.example.com/link3" target="_blank">Link 3</a></p>
+    </div>
+
+    <script>
+        // JavaScript to open both links when container link is clicked
+        let containerLink = document.querySelector('.container-link');
+        let innerLinks = document.querySelectorAll('.inner-links a');
+        
+        containerLink.addEventListener('click', () => {
+            let link2 = 'https://www.example.com/link2';
+            let link3 = 'https://www.example.com/link3';
+            window.open(link2, '_blank');
+            window.open(link3, '_blank');
+        });
+        
+        innerLinks.forEach(link => {
+            link.addEventListener('click', (event) => {
+                event.stopPropagation(); // Prevent the click event from bubbling to the container link
+            });
+        });
+    </script>
+</body>
+</html>

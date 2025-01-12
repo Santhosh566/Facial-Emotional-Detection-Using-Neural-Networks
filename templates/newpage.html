@@ -1,0 +1,326 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facial Emotional Detection Using Artificial Neural Networks</title>
+    <style>
+        body {
+            background-color: #f5f5f5; /* Light gray background */
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        nav {
+            display: flex; /* Use flexbox for layout */
+            justify-content: center; /* Center the links horizontally */
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        nav a:hover {
+            color: #ff5733; /* Orange hover color */
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Facial Emotional Detection Using Artificial Neural Networks</h1>
+        <nav>
+            
+            <a href="/Preproc">Data Preprocessing</a>
+            <a href="/Dataloader">Data Loader</a>
+            <a href="/Chatbot">Chatbot</a>
+        </nav>
+    </header>
+
+    
+
+    <footer>
+        <p>&copy; 2023 Our Website. All rights reserved.</p>
+    </footer>
+    <marquee>Welcome To </maequee>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facial Emotional Detection Using Artificial Neural Networks</title>
+    <style>
+        body {
+            background-color: #f5f5f5; /* Light gray background */
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        nav {
+            display: flex; /* Use flexbox for layout */
+            justify-content: space-between; /* Distribute links evenly */
+            align-items: center;
+            margin-top: 20px;
+            padding: 0 20px; /* Add padding to the sides */
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        nav a:hover {
+            color: #ff5733; /* Orange hover color */
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Facial Emotional Detection Using Artificial Neural Networks</h1>
+        <nav>
+            <a href="/about">About</a> 
+            <a href="/Preproc">Data Preprocessing</a>
+            <a href="/Dataloader">Data Loader</a>
+            <a href="/Chatbot">Chatbot</a>
+            <a href="/logout">Logout</a> 
+        </nav>
+    </header>
+
+    <img src="C:\\Users\\santh\\Desktop\\Project6\\static\\emotio.jpeg" alt="Project Image" class="project-image">
+    
+    <marquee>Welcome To Facial Emotional Detection Project</marquee>
+    
+</body>
+</html>
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facial Emotional Detection Using Neural Networks</title>
+    <style>
+        body {
+            background-color: #f5f5f5; /* Light gray background */
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        nav {
+            display: flex; /* Use flexbox for layout */
+            justify-content: space-between; /* Distribute links evenly */
+            align-items: center;
+            margin-top: 20px;
+            padding: 0 20px; /* Add padding to the sides */
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        nav a:hover {
+            color: #ff5733; /* Orange hover color */
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+        }
+
+        /* Added styles for the grid layout */
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr); /* 7 equal-width columns */
+            grid-gap: 10px; /* Gap between grid items */
+            margin-top: 20px;
+        }
+
+        /* Style for each image container */
+        .image-container {
+            border: 2px solid #333; /* Border color */
+            padding: 10px;
+            background-color: #fff; /* White background for image container */
+            text-align: center; /* Align content to center */
+            border-radius: 10px; /* Rounded corners */
+        }
+
+        /* Apply same styles to all image containers */
+        .image-container img,
+        .image-name {
+            margin: 0; /* Remove default margin */
+            padding: 10px; /* Apply padding to images and names */
+            background-color: #f5f5f5; /* Light gray background */
+            border-radius: 8px; /* Rounded corners */
+            max-height: 100px; /* Set maximum height for images */
+        }
+
+        /* Highlight border color on hover */
+        .image-container:hover {
+            border-color: #ff5733; /* Orange border color on hover */
+        }
+
+        /* Style for the image inside the container */
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Style for the name below the image */
+        .image-name {
+            font-weight: bold;
+        }
+
+        /* Style for the quotation display */
+        .quotation {
+            font-style: italic;
+            color: #333; /* Dark gray text color */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Facial Emotional Detection Using Neural Networks</h1>
+        <nav>
+            <a href="/about">About</a>
+            <a href="/Preproc">Real Time Detection</a>
+            <a href="/Dataloader">Data Loader</a>
+            <a href="/Chatbot">Chatbot</a>
+            <a href="/contact">Contact Us</a>
+            <a href="/rough">Contact Us</a>
+            <a href="/logout">Logout</a>
+        </nav>
+    </header>
+    <marquee>Welcome To Face Emotion Detection</marquee>
+    <!-- Your main content here -->
+    <div class="image-grid">
+        <!-- Replace these placeholder images and names with your actual image and name data -->
+        <div class="image-container" onmouseover="showQuotation('Angry')" onmouseout="hideQuotation()">
+            <img src="/static/ang.jpg" alt="Angry">
+            <div class="image-name">Angry</div>
+        </div>
+        <div class="image-container" onmouseover="showQuotation('Fear')" onmouseout="hideQuotation()">
+            <img src="/static/fear.jpg" alt="Fear">
+            <div class="image-name">Fear</div>
+        </div>
+        <div class="image-container" onmouseover="showQuotation('Happy')" onmouseout="hideQuotation()">
+            <img src="/static/i1.jpg" alt="Happy">
+            <div class="image-name">Happy</div>
+        </div>
+        <div class="image-container" onmouseover="showQuotation('Sad')" onmouseout="hideQuotation()">
+            <img src="/static/i2.jpg" alt="Sad">
+            <div class="image-name">Sad</div>
+        </div>
+        <div class="image-container" onmouseover="showQuotation('Surprised')" onmouseout="hideQuotation()">
+            <img src="/static/sur.jpg" alt="Surprised">
+            <div class="image-name">Surprised</div>
+        </div>
+        <div class="image-container" onmouseover="showQuotation('Neutral')" onmouseout="hideQuotation()">
+            <img src="/static/neu.jpg" alt="Neutral">
+            <div class="image-name">Neutral</div>
+        </div>
+        <div class="image-container" onmouseover="showQuotation('Disgust')" onmouseout="hideQuotation()">
+            <img src="/static/dis.jpg" alt="Disgust">
+            <div class="image-name">Disgust</div>
+        </div>
+       
+        <!-- Add more image containers for each emotion -->
+        <!-- Repeat for a total of 7 images -->
+    </div>
+
+    <!-- Quotation display -->
+    <div class="quotation" id="quotationDisplay"></div>
+
+    
+
+    <!-- JavaScript code for showing and hiding quotations -->
+    <script>
+        function showQuotation(emotion) {
+            const quotations = {
+                'Angry': "When angry, count to ten before you speak. If very angry, count to one hundred.",
+                'Fear': "Fear is only as deep as the mind allows.",
+                'Happy': "The most important thing is to enjoy your life – to be happy – it's all that matters.",
+                'Sad': "Tears come from the heart and not from the brain.",
+                'Surprised': "The only thing that should surprise us is that there are still some things that can surprise us.",
+                'Neutral': "Sometimes, being indifferent is the best response.",
+                'Disgust': "The feeling of disgust is a signal that one's self is engaged in defense."
+            };
+            document.getElementById('quotationDisplay').textContent = quotations[emotion];
+        }
+
+        function hideQuotation() {
+            document.getElementById('quotationDisplay').textContent = '';
+        }
+    </script>
+    <br>
+    <video width="640" height="250" controls loop>
+        <source src='/static/emotion.mp4' type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+</body>
+</html>

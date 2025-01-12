@@ -1,0 +1,159 @@
+
+<!--<!DOCTYPE html>
+<html>
+<head>
+    <title align="center">Register</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('/static/face2.jpg'); /* Add background image */
+            background-size: cover;
+            background-position: center;
+        }
+        form {
+            width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input[type="text"],
+        input[type="password"] {
+            width: calc(100% - 40px); /* Adjust width to accommodate icon */
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            background-image: url('/static/user.png'); /* Add username icon */
+            background-repeat: no-repeat;
+            background-position: 5px center; /* Adjust the position */
+            background-size: 20px; /* Adjust the size */
+            padding-left: 35px; /* Adjust the padding */
+        }
+        
+        input[type="password"] {
+            background-image: url('/static/pass.png'); /* Add password icon */
+        }
+        
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        h2{
+            color:white;
+        }
+        s1{
+            color:white;
+        }
+    </style>
+</head>
+<body align="center">
+    <h2 align="center">Register</h2>
+    <form method="post">
+        {{ form.csrf_token }}
+        <p>{{ form.username.label }}<br>{{ form.username }}</p>
+        <p>{{ form.password.label }}<br>{{ form.password }}</p>
+        <p>{{ form.confirmpassword.label }}<br>{{ form.confirmpassword }}</p>
+        <p>{{ form.submit }}</p>
+    </form>
+    <p id="s1" align="center" color="white">Already have an account? <a href="{{ url_for('loginuser') }}">Login here</a></p>
+</body>
+</html>-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('/static/face2.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        form {
+            width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input[type="text"],
+        input[type="password"] {
+            width: calc(100% - 40px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            background-image: url('/static/user.png');
+            background-repeat: no-repeat;
+            background-position: 5px center;
+            background-size: 20px;
+            padding-left: 35px;
+        }
+        input[type="password"] {
+            background-image: url('/static/pass.png');
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .error-message {
+            color: red;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <h2 align="center">Register</h2>
+    <form method="post">
+        {{ form.csrf_token }}
+        <p>{{ form.username.label }}<br>{{ form.username }}</p>
+        <p>{{ form.password.label }}<br>{{ form.password }}</p>
+        <p>{{ form.confirmpassword.label }}<br>{{ form.confirmpassword }}</p>
+        <!-- Display error message -->
+        {% if form.errors %}
+        <div class="error-message">
+            {{ form.errors }}
+        </div>
+        {% endif %}
+        <input type="submit" value="Register">
+    </form>
+    <p align="center">Already have an account? <a href="{{ url_for('loginuser') }}">Login here</a></p>
+</body>
+</html>

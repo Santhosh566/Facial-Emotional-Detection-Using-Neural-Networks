@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+</head>
+<body align="center">
+    <h1 align="center">Emotion Image Display</h1>
+    <form id="emotionForm" action="/generated" method="POST" align="center">
+        <label for="emotion_name">Enter Emotion Name:</label>
+        <input type="text" id="emotion_name" name="emotion_name">
+        <input type="hidden" id="images_folder" name="images_folder" value="C:\\Users\\santh\\Desktop\\Project6\\static\\images">
+        <button type="submit" onclick="submitForm()">Submit</button>
+    </form>
+    <div id="image-container"></div>
+    <a href="/newpage" style="display: inline-block; margin-top: 20px; padding: 10px 20px; background-color: #ff5733; color: white; text-decoration: none; border-radius: 5px;">Back TO Home Page</a>
+    <footer>
+        <p>&copy; 2024 Chatbot Application</p>
+    </footer>
+    <script>
+        function submitForm() {
+            // Get the emotion name and images folder path
+            var emotionName = document.getElementById("emotion_name").value;
+            var imagesFolder = document.getElementById("images_folder").value;
+
+            // Update the hidden input value with the images folder path
+            document.getElementById("images_folder").value = imagesFolder;
+
+            // Submit the form
+            document.getElementById("emotionForm").submit();
+        }
+    </script>
+</body>
+</html>

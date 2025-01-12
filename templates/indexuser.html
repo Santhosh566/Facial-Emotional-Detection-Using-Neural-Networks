@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("/static/face3.jpg"); /* Background image for the whole page */
+            background-size: cover;
+            background-position: center;
+            padding: 50px; /* Add padding to see the background image */
+        }
+        h1 {
+            /* Background image for h1 */
+            color: white; /* Text color for h1 */
+            padding: 20px;
+            text-align: center;
+        }
+        p {
+            /* Background image for paragraphs */
+            padding: 20px;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Facial Emotional Detection Using Neural Networks</h1>
+    <h2><p>Welcome to the Facial Emotional Detection project! This project utilizes artificial neural networks to analyze and detect emotions from facial expressions.</p></h2>
+    {% if 'username' in session %}
+        <p>Hello, {{ session['username'] }}! <a href="newpage.html">Dashboard</a></p>
+    {% else %}
+        <h2><p>You are not logged in. <a href="{{ url_for('loginuser') }}">Login here</a></p></h2>
+    {% endif %}
+</body>
+</html>
+
+
+
+
