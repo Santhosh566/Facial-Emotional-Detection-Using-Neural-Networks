@@ -92,9 +92,9 @@ The final layer uses a **softmax** activation function to predict emotion probab
    ![image](https://github.com/user-attachments/assets/12696f53-3aee-4ccf-92c0-82fa073d2df2)
 3. Real-Time Detections
    ## 3.1 Happy
-   ![image](C:\Users\santh\Pictures\Screenshots\Screenshot (334).png)
+   ![Screenshot (334)](https://github.com/user-attachments/assets/4cc73c25-ea43-4177-81bb-f4a90d732bde)
    ## 3.2 Sad
-   ![image](https://github.com/user-attachments/assets/f30dab2a-d004-4a63-96de-7ffdb4f9aa90)
+   ![Screenshot (336)](https://github.com/user-attachments/assets/55a28ffc-88a3-447e-9fba-c8f1d7e4f878)
    ## 3.3 Angry
   ![image](https://github.com/user-attachments/assets/5bc60c44-c96e-4240-a12c-fa0d455958c4)
    ## 3.4 Fear
