@@ -95,8 +95,8 @@ The final layer uses a **softmax** activation function to predict emotion probab
    ![Screenshot (334)](https://github.com/user-attachments/assets/e7c19d34-a84b-4c08-beab-0c0e7978695f)
    ## 3.2 Sad
    ![Screenshot (336)](https://github.com/user-attachments/assets/7220826f-d77f-463e-815c-82718cef6706)
-   ## 3.5 Surprise
-  ![image](https://github.com/user-attachments/assets/26170ecb-fbaa-41e8-928f-af3c384d6262)
+   ## 3.3 Surprise
+   ![image](https://github.com/user-attachments/assets/26170ecb-fbaa-41e8-928f-af3c384d6262)
  
 
 ---
